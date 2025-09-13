@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>France — Wonders & Hotels</title>
+  <style>
+    :root{
+      --bg:#f7f6f4;--card:#fff;--accent:#2b2f4a;--muted:#6b6f86;--gold:#c9a66b;--radius:14px;--ease:250ms;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Georgia","Times New Roman",serif;background:var(--bg);color:var(--accent);-webkit-font-smoothing:antialiased}
+    header{padding:20px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(43,47,74,.06);}
+    nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--accent);font-weight:600}
+
+    .container{max-width:1100px;margin:22px auto;padding:20px}
+    .hero{padding:22px;background:linear-gradient(90deg,rgba(201,166,107,0.06),transparent);border-radius:var(--radius)}
+    .hero h1{margin:0 0 8px;font-size:1.6rem}
+    .hero p{margin:0;color:var(--muted)}
+
+    .wonders{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:22px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(43,47,74,.06);transition:transform var(--ease) ease,box-shadow var(--ease) ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,47,74,.09)}
+    .card-media{position:relative;height:220px;background:#eee}
+    .card-media img{width:100%;height:100%;object-fit:cover;display:block}
+    .card-body{padding:16px}
+    .card-body h2{margin:0 0 8px;font-size:1.12rem}
+    .card-body p{margin:0 0 12px;color:var(--muted);font-size:0.95rem}
+
+    .more-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .more-btn{background:var(--gold);border:none;color:#fff;padding:9px 14px;border-radius:10px;cursor:pointer;font-weight:700;letter-spacing:0.2px}
+    .hotels-wrap{overflow:hidden;transition:max-height var(--ease) ease;padding:0 16px}
+    .hotels{background:#faf9f7;border-top:1px solid rgba(43,47,74,.06);padding:14px 16px;display:grid;gap:12px}
+    .hotel-card{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;background:white;border:1px solid rgba(43,47,74,.03)}
+    .hotel-thumb{width:64px;height:48px;flex:0 0 64px;overflow:hidden;border-radius:8px}
+    .hotel-thumb img{width:100%;height:100%;object-fit:cover}
+    .hotel-info{flex:1}
+    .hotel-info strong{display:block;font-size:0.98rem}
+    .hotel-meta{font-size:0.9rem;color:var(--muted)}
+    .hotel-price{font-weight:700}
+    .book{background:var(--accent);color:#fff;padding:8px 10px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* small details */
+    .rating{display:inline-block;background:#fff;padding:2px 6px;border-radius:12px;border:1px solid rgba(43,47,74,.06);font-size:0.85rem;margin-left:6px}
+
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);text-align:center;font-size:0.92rem}
+
+    @media (max-width:620px){.card-media{height:160px}.hotel-thumb{width:56px;height:40px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:700;font-size:1.02rem">My Travel Wishlist</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>France — Iconic Wonders & Nearby Stays</h1>
+      <p>Five-star inspiration with practical details: expanded descriptions, curated hotels with distance, ratings, short highlights, and indicative prices.</p>
+    </section>
+
+    <section class="wonders">
+      <!-- Eiffel Tower -->
+      <article class="card" id="card-eiffel">
+        <div class="card-media">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower, Paris">
+        </div>
+        <div class="card-body">
+          <h2>Eiffel Tower</h2>
+          <p>The Eiffel Tower has dominated the Paris skyline since 1889. Visitors can ascend multiple levels for sweeping panoramic views, dine at the tower's restaurants, or enjoy the shimmering lights after dusk. It's a must-see for first-time visitors and a romantic landmark for returning travelers.</p>
+          <div class="more-row">
+            <button class="more-btn" data-target="eiffel">View Nearby Hotels</button>
+            <div style="font-size:0.92rem;color:var(--muted)">400m from Champ de Mars</div>
+          </div>
+        </div>
+        <div class="hotels-wrap" id="hotels-eiffel" style="max-height:0;">
+          <div class="hotels">
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\4504177-1382971_0_95_2200_1199_2200_1200.rc.jpg" alt="La Comtesse"></div>
+              <div class="hotel-info">
+                <strong>Hotel La Comtesse — 4★ <span class="rating">8.6</span></strong>
+                <div class="hotel-meta">Rooftop terrace with direct Eiffel views — modern rooms with Haussmann touches.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$160–$220/night</div>
+                
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\aja_p_4686-59.jpg" alt="Pullman"></div>
+              <div class="hotel-info">
+                <strong>Pullman Paris Tour Eiffel — 4★ <span class="rating">8.4</span></strong>
+                <div class="hotel-meta">Contemporary design, short walk to the tower, business amenities and panoramic bar.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$200–$270/night</div>
+
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\ice-100053252-0746998_3XL-452362.jpg" alt="Shangri-La"></div>
+              <div class="hotel-info">
+                <strong>Shangri-La Paris — 5★ <span class="rating">9.2</span></strong>
+                <div class="hotel-meta">Luxurious rooms in a former prince's palace — exceptional service and some suites with Eiffel views.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$450–$700/night</div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Louvre Museum -->
+      <article class="card" id="card-louvre">
+        <div class="card-media">
+          <img src="c:\Users\Christine Bautista\Pictures\c4a520a45f9aea6fbcaab0eee5089a5a-Louvre Paris Pyramids.jpg" alt="Louvre Museum, Paris">
+        </div>
+        <div class="card-body">
+          <h2>Louvre Museum</h2>
+          <p>The Louvre is the world’s largest art museum and a historic monument in Paris, home to an unparalleled collection spanning thousands of years. Highlights include the Mona Lisa, Winged Victory, and vast Egyptian antiquities. Allow several hours — or a full day — to explore its grand wings and hidden galleries.</p>
+          <div class="more-row">
+            <button class="more-btn" data-target="louvre">View Nearby Hotels</button>
+            <div style="font-size:0.92rem;color:var(--muted)">On the Right Bank of the Seine</div>
+          </div>
+        </div>
+        <div class="hotels-wrap" id="hotels-louvre" style="max-height:0;">
+          <div class="hotels">
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\638912673.jpg" alt="Hotel du Louvre"></div>
+              <div class="hotel-info">
+                <strong>Hotel du Louvre — 4★ <span class="rating">8.7</span></strong>
+                <div class="hotel-meta">Classic luxury steps from the museum entrance — historic décor with modern comfort.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$200–$320/night</div>
+
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\427860104.jpg" alt="Relais du Louvre"></div>
+              <div class="hotel-info">
+                <strong>Relais du Louvre — 4★ <span class="rating">8.2</span></strong>
+                <div class="hotel-meta">Boutique option near the Tuileries Garden; intimate rooms and personalized service.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$150–$210/night</div>
+
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\image.jpg" alt="La Clef Louvre"></div>
+              <div class="hotel-info">
+                <strong>La Clef Louvre Paris — 5★ <span class="rating">9.0</span></strong>
+                <div class="hotel-meta">Upscale serviced residences ideal for longer stays and families, close to the museum.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$300–$480/night</div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Mont Saint-Michel -->
+      <article class="card" id="card-msm">
+        <div class="card-media">
+          <img src="c:\Users\Christine Bautista\Pictures\france-mont-saint-michel.jpg" alt="Mont Saint-Michel">
+        </div>
+        <div class="card-body">
+          <h2>Mont Saint-Michel</h2>
+          <p>Rising dramatically from tidal sands, Mont Saint-Michel is one of France's most atmospheric sites. The medieval abbey crowns the island, and narrow streets wind past centuries-old houses and shops. Time your visit to experience the tide change and quieter early mornings.</p>
+          <div class="more-row">
+            <button class="more-btn" data-target="msm">View Nearby Hotels</button>
+            <div style="font-size:0.92rem;color:var(--muted)">Located in Normandy — accessible by causeway</div>
+          </div>
+        </div>
+        <div class="hotels-wrap" id="hotels-msm" style="max-height:0;">
+          <div class="hotels">
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\50471_15040321260026706116.jpg" alt="Le Relais"></div>
+              <div class="hotel-info">
+                <strong>Le Relais Saint-Michel — 4★ <span class="rating">8.1</span></strong>
+                <div class="hotel-meta">Cozy rooms a short walk from the island entrance; rustic charm and local dining.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$120–$190/night</div>
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\images.jpg" alt="Hotel Vert"></div>
+              <div class="hotel-info">
+                <strong>Hotel Vert — 3★ <span class="rating">7.6</span></strong>
+                <div class="hotel-meta">Simple family-run hotel with friendly service and traditional Norman breakfasts.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$80–$120/night</div>
+
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <div class="hotel-thumb"><img src="c:\Users\Christine Bautista\Pictures\l-auberge-de-la-mere.jpg" alt="La Mere Poulard"></div>
+              <div class="hotel-info">
+                <strong>La Mère Poulard — 3★ <span class="rating">7.9</span></strong>
+                <div class="hotel-meta">Historic inn famous for its omelette — unique atmosphere right on the island.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="hotel-price">$130–$220/night</div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer>
+      © <span id="year"></span> My Travel Wishlist — Christine Bautista
+    </footer>
+  </main>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // accordion open/close with smooth height transition
+    document.querySelectorAll('.more-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const target = btn.getAttribute('data-target');
+        const wrap = document.getElementById('hotels-'+target);
+        if(!wrap) return;
+        if(wrap.style.maxHeight && wrap.style.maxHeight !== '0px'){
+          wrap.style.maxHeight = '0';
+        } else {
+          // close any open
+          document.querySelectorAll('.hotels-wrap').forEach(w=>w.style.maxHeight='0');
+          // open this one
+          wrap.style.maxHeight = wrap.scrollHeight + 'px';
+          // ensure visible after calculating height
+        }
+      })
+    })
+
+    // when resizing, recalc any open max-heights
+    window.addEventListener('resize',()=>{
+      document.querySelectorAll('.hotels-wrap').forEach(w=>{
+        if(w.style.maxHeight && w.style.maxHeight !== '0px'){
+          w.style.maxHeight = w.scrollHeight + 'px';
+        }
+      })
+    })
+  </script>
+</body>
+</html>

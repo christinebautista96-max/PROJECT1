@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Tips — Simple & Elegant</title>
+  <style>
+    :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f172a;
+      --accent-2:#0ea5a4;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--accent);line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);padding:18px;border-radius:12px;margin-bottom:18px}
+    .hero h1{margin:0;font-size:24px}
+    .hero p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* Cards grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06);border:1px solid rgba(15,23,42,0.02)}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Packing checklist */
+    .checklist{margin-top:20px;background:var(--card);padding:14px;border-radius:10px}
+    .checklist ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+
+    /* Tips table */
+    table{width:100%;border-collapse:collapse;margin-top:18px}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #eef2f6;font-size:14px}
+    th{background:transparent;color:var(--muted);font-weight:600}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:520px){.brand span{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TR</div>
+        <div>
+          <strong>Travel Tips</strong>
+          <div style="font-size:13px;color:var(--muted)">Simple & elegant guide</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="countries.html">Countries</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Smart travel tips for stress-free trips</h1>
+      <p>Short, practical advice for packing, staying safe, and choosing the best times to visit.</p>
+    </section>
+
+    <!-- Card grid with at least 5 tips -->
+    <section aria-label="Top tips" class="grid">
+      <article class="card">
+        <h3>Pack light — layer for weather</h3>
+        <p>Bring versatile pieces you can layer. Choose neutral colors and one statement item to save space and mix-and-match outfits.</p>
+      </article>
+
+      <article class="card">
+        <h3>Make digital & physical copies</h3>
+        <p>Scan passport, tickets, and important documents to cloud storage and keep a printed copy separate from originals.</p>
+      </article>
+
+      <article class="card">
+        <h3>Safety: Blend in and stay aware</h3>
+        <p>Avoid flashy jewelry, keep valuables out of sight, and learn a few local phrases — they help you navigate and avoid scams.</p>
+      </article>
+
+      <article class="card">
+        <h3>Best time to visit: shoulder seasons</h3>
+        <p>Travel during shoulder seasons (just before/after peak) for better prices, fewer crowds, and pleasant weather.</p>
+      </article>
+
+      <article class="card">
+        <h3>Plan a flexible daily rhythm</h3>
+        <p>Block mornings for popular sights, leave afternoons flexible for rest or unexpected finds — it keeps travel enjoyable, not rushed.</p>
+      </article>
+
+      <article class="card">
+        <h3>Local SIM or eSIM</h3>
+        <p>Get local data for maps and rides — it’s usually cheaper and more reliable than roaming, especially for longer stays.</p>
+      </article>
+    </section>
+
+    <!-- Packing checklist -->
+    <section class="checklist" aria-label="Packing checklist">
+      <strong>Packing checklist (quick)</strong>
+      <ul>
+        <li>Travel documents + photocopies</li>
+        <li>Charge cables, power bank, travel adapter</li>
+        <li>Minimal toiletries (solid shampoo bar saves space)</li>
+        <li>Light waterproof jacket and a scarf</li>
+        <li>Small first-aid kit and any prescription meds</li>
+      </ul>
+    </section>
+
+    <!-- Tips table (best visiting times + safety) -->
+    <section aria-label="tips table">
+      <table>
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Quick advice</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Packing</td>
+            <td>Use packing cubes; limit shoes to two pairs</td>
+            <td>Saves space and keeps luggage organized</td>
+          </tr>
+          <tr>
+            <td>Safety</td>
+            <td>Use anti-theft bag and keep copies of IDs</td>
+            <td>Reduces risk and speeds up recovery if lost</td>
+          </tr>
+          <tr>
+            <td>Money</td>
+            <td>Carry one card and small local cash</td>
+            <td>Cards sometimes fail; cash covers small vendors and tips</td>
+          </tr>
+          <tr>
+            <td>When to go</td>
+            <td>Check shoulder seasons & local holidays</td>
+            <td>Better weather, fewer crowds, lower prices</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div>Created by: Christine Bautista | BSIT Student, UE</div>
+      <div style="margin-top:6px;color:var(--muted);font-size:12px">© Travel Tips</div>
+    </footer>
+  </div>
+</body>
+</html>

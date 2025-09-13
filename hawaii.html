@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland — Wonders & Hotels</title>
+  <style>
+    :root{
+      --bg:#f7f6f4;--card:#fff;--accent:#2b2f4a;--muted:#6b6f86;--gold:#c9a66b;--radius:14px;
+    }
+    body{margin:0;font-family:"Georgia","Times New Roman",serif;background:var(--bg);color:var(--accent);}
+    header{padding:24px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(43,47,74,.06);}
+    nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--accent);font-weight:600}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{padding:24px;background:linear-gradient(90deg,rgba(201,166,107,0.06),transparent);border-radius:var(--radius)}
+    .hero h1{margin:0 0 8px;font-size:1.6rem}
+    .wonders{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 6px 16px rgba(43,47,74,.06);}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card-body{padding:16px}
+    .card-body h2{margin:0 0 6px;font-size:1.2rem}
+    .card-body p{margin:0 0 12px;color:var(--muted);font-size:0.95rem;line-height:1.4}
+    .more-btn{background:var(--gold);border:none;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+    .hotels{display:none;padding:14px;border-top:1px solid rgba(43,47,74,.08);background:#faf9f7;animation:slide 0.4s ease}
+    @keyframes slide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    .hotel{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:0.92rem}
+    .hotel img{width:60px;height:40px;object-fit:cover;border-radius:6px}
+    .hotel strong{display:block}
+    .book-btn{display:inline-block;margin-top:4px;background:var(--accent);color:#fff;padding:4px 8px;font-size:0.85rem;border-radius:6px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:700;font-size:1.1rem">My Travel Wishlist</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hawaii — Wonders to Discover</h1>
+      <p>Switzerland offers majestic mountains, pristine lakes, and charming villages. Discover three breathtaking wonders and where to stay nearby.</p>
+    </section>
+
+    <section class="wonders">
+
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\diamond-head-1.jpg" alt="Matterhorn">
+        <div class="card-body">
+          <h2>Diamond Head</h2>
+          <p>Hawaii’s most famous volcanic crater, offering panoramic views of Honolulu after a rewarding hike to the summit.</p>
+          <button class="more-btn" onclick="toggleHotels('matterhorn')">More Info</button>
+        </div>
+        <div class="hotels" id="matterhorn">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\hilton-hawaiian-village.jpg" alt="Hotel Monte Rosa">
+            <div>
+              <strong>Hilton Hawaiian Village</strong> • 2km away • ⭐⭐⭐⭐ • $180–$300/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\f3cfa43a7b2ad3cd2bd0b40a89e0aacb.jpg" alt="Grand Hotel Zermatterhof">
+            <div>
+              <strong>Outrigger Waikiki Beach Resort</strong> • 3km away • ⭐⭐⭐⭐⭐ •  $200–$350/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+  
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\images (6).jpg" alt="Lake Geneva">
+        <div class="card-body">
+          <h2>Haleakalā National Park</h2>
+          <p>A massive shield volcano on Maui, famous for its sunrise views above the clouds and otherworldly landscapes. More Info.</p>
+          <button class="more-btn" onclick="toggleHotels('geneva')">More Info</button>
+        </div>
+        <div class="hotels" id="geneva">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\images (7).jpg" alt="Hotel d'Angleterre">
+            <div>
+              <strong>Wailea Beach Resort</strong> • 15km away • ⭐⭐⭐⭐⭐ • $300–$500/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\images (8).jpg" alt="Fairmont Grand Hotel Geneva">
+            <div>
+              <strong>Hyatt Regency Maui</strong> • 18km away • ⭐⭐⭐⭐⭐ • $280–$420/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\images (9).jpg" alt="Jungfraujoch">
+        <div class="card-body">
+          <h2>Nā Pali Coast</h2>
+          <p>Known for emerald cliffs, sea caves, and hidden beaches, this Kauai wonder can be explored by boat, helicopter, or hiking.</p>
+          <button class="more-btn" onclick="toggleHotels('jungfrau')">More Info</button>
+        </div>
+        <div class="hotels" id="jungfrau">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\images (10).jpg" alt="Hotel Interlaken">
+            <div>
+              <strong>Princeville Resort</strong> • 5km away • ⭐⭐⭐⭐ • $250–$400/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\hanalei-bay-resort.jpg" alt="Victoria Jungfrau Grand Hotel">
+            <div>
+              <strong>Hanalei Bay Resort</strong> • 6km away • ⭐⭐⭐⭐⭐ • $180–$280/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    function toggleHotels(id){
+      const el=document.getElementById(id);
+      el.style.display = (el.style.display==='block')?'none':'block';
+    }
+  </script>
+</body>
+</html>

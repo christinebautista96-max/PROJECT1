@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog - My Travel Wishlist</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      background-color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-size: 22px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #c75b39;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .blog-post {
+      display: flex;
+      gap: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .blog-post img {
+      width: 300px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .blog-content h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .blog-content p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      margin-top: auto;
+      display: inline-block;
+      text-decoration: none;
+      background: #c75b39;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .read-more:hover {
+      background: #a6442b;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Travel Wishlist</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Travel Blog & News</h2>
+
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+      <img src="c:\Users\Christine Bautista\Pictures\Haute-Route-Switzerland0000.jpg" alt="Switzerland Travel">
+      <div class="blog-content">
+        <div>
+          <div class="date">September 1, 2025</div>
+          <h2>Hiking the Majestic Alps</h2>
+          <p>Switzerland’s Alps offer breathtaking views, charming villages, and scenic trails for adventurers of all levels.</p>
+        </div>
+        <a href="https://rawtravel.com/destinations/switzerland/" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+      <img src="c:\Users\Christine Bautista\Pictures\Fushimi-Inari-Shrine-Kyoto-Japan.jpg" alt="Japan Travel">
+      <div class="blog-content">
+        <div>
+          <div class="date">August 25, 2025</div>
+          <h2>Japan’s Blend of Tradition & Modernity</h2>
+          <p>From ancient temples to neon-lit Tokyo streets, Japan offers an unforgettable journey of contrasts.</p>
+        </div>
+        <a href="https://gowithguide.com/blog/japanese-culture-the-differences-between-old-and-modern-3762" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+      <img src="c:\Users\Christine Bautista\Pictures\Screenshots\Screenshot 2025-09-13 100223.png" alt="Australia Travel">
+      <div class="blog-content">
+        <div>
+          <div class="date">August 12, 2025</div>
+          <h2>Diving the Great Barrier Reef</h2>
+          <p>Explore the vibrant marine life of Australia’s world-famous reef, a paradise for divers and nature lovers alike.</p>
+        </div>
+        <a href="https://www.padi.com/diving-in/great-barrier-reef/" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="blog-post">
+      <img src="c:\Users\Christine Bautista\Pictures\Hawaii-big-island-2.jpg" alt="Egypt Travel">
+      <div class="blog-content">
+        <div>
+          <div class="date">February 29, 2024</div>
+          <h2>Hawaii (the big island!)</h2>
+          <p>Sharing a few fun things we did during our trip to Hawaii – the big island! .</p>
+        </div>
+        <a href="https://www.thesunnysideupblog.com/2024/02/hawaii-the-big-island/" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Post 5 -->
+    <div class="blog-post">
+      <img src="c:\Users\Christine Bautista\Pictures\9ca5db53-500d-4bd4-957f-1d952646ccca (1).jpg" alt="Hawaii Travel">
+      <div class="blog-content">
+        <div>
+          <div class="date">July 15, 2025</div>
+          <h2>Relaxing in Hawaii’s Paradise</h2>
+          <p>Enjoy crystal-clear waters, golden sands, and the aloha spirit on Hawaii’s beautiful islands.</p>
+        </div>
+        <a href="https://sfbayareabuzz.com/2020/02/23/relaxing-in-paradise-oahu-hawaii/" class="read-more">Read More</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Created by: Christine Bautista | BSIT Student, UE</p>
+  </footer>
+</body>
+</html>

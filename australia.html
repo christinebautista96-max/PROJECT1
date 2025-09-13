@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australia — Wonders to Discover</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    nav a {
+      color: #333;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: #f9f7f3;
+      padding: 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #2c6e91;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+    .container {
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #2c6e91;
+    }
+    .card-content p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .hotels {
+      display: none;
+      padding: 15px 20px;
+      background: #f8f8f8;
+      font-size: 0.9em;
+      border-top: 1px solid #eee;
+    }
+    .hotel {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .hotel img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 12px;
+    }
+    .hotel-info {
+      line-height: 1.4;
+    }
+    .hotel-info strong {
+      color: #2c6e91;
+    }
+    button {
+      background: #2c6e91;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin-top: 12px;
+    }
+    button:hover {
+      background: #1e4c64;
+    }
+    footer {
+      background: #f9f7f3;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+  <script>
+    function toggleHotels(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>My Travel Wishlist</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Australia — Wonders to Discover</h2>
+    <p>Australia is a land of natural wonders and iconic landmarks. From coral reefs to cultural icons and sacred sites, here are three unforgettable experiences.</p>
+  </section>
+
+  <div class="container">
+    <!-- Wonder 1 -->
+    <div class="card">
+      <img src="c:\Users\Christine Bautista\Pictures\images (11).jpg" alt="Great Barrier Reef">
+      <div class="card-content">
+        <h3>Great Barrier Reef</h3>
+        <p>The world’s largest coral reef system, home to vibrant marine life and stunning underwater ecosystems.</p>
+        <button onclick="toggleHotels('hotels1')">More Info</button>
+      </div>
+      <div class="hotels" id="hotels1">
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\images (12).jpg" alt="Shangri-La The Marina">
+          <div class="hotel-info">
+            <strong>Shangri-La The Marina</strong><br>
+            2 km away • ⭐⭐⭐⭐ • $220–$380/night
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\2901_ho_00_p_1024x768.jpg" alt="Pullman Reef Hotel Casino">
+          <div class="hotel-info">
+            <strong>Pullman Reef Hotel Casino</strong><br>
+            3 km away • ⭐⭐⭐⭐ • $200–$350/night
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wonder 2 -->
+    <div class="card">
+      <img src="c:\Users\Christine Bautista\Pictures\p0gp95cq.jpg" alt="Sydney Opera House">
+      <div class="card-content">
+        <h3>Sydney Opera House</h3>
+        <p>An architectural masterpiece on Sydney’s harbor, hosting world-class performances and events.</p>
+        <button onclick="toggleHotels('hotels2')">More Info</button>
+      </div>
+      <div class="hotels" id="hotels2">
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\images (13).jpg" alt="Park Hyatt Sydney">
+          <div class="hotel-info">
+            <strong>Park Hyatt Sydney</strong><br>
+            0.5 km away • ⭐⭐⭐⭐⭐ • $400–$700/night
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\461661326.jpg" alt="Sydney Harbour Marriott">
+          <div class="hotel-info">
+            <strong>Sydney Harbour Marriott</strong><br>
+            1 km away • ⭐⭐⭐⭐ • $250–$450/night
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wonder 3 -->
+    <div class="card">
+      <img src="c:\Users\Christine Bautista\Pictures\Nr.32-Uluru-1-e1519883081580.jpg" alt="Uluru">
+      <div class="card-content">
+        <h3>Uluru</h3>
+        <p>A sacred sandstone monolith in the Northern Territory, deeply significant to the Anangu people.</p>
+        <button onclick="toggleHotels('hotels3')">More Info</button>
+      </div>
+      <div class="hotels" id="hotels3">
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\490644388.jpg" alt="Sails in the Desert">
+          <div class="hotel-info">
+            <strong>Sails in the Desert</strong><br>
+            5 km away • ⭐⭐⭐⭐ • $280–$450/night
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="c:\Users\Christine Bautista\Pictures\desert-gardens-hotel.jpg" alt="Desert Gardens Hotel">
+          <div class="hotel-info">
+            <strong>Desert Gardens Hotel</strong><br>
+            6 km away • ⭐⭐⭐ • $180–$300/night
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by [Your Name] • BSIT</p>
+  </footer>
+</body>
+</html>

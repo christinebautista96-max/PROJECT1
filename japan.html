@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan — Wonders & Hotels</title>
+  <style>
+    :root{
+      --bg:#f7f6f4;--card:#fff;--accent:#2b2f4a;--muted:#6b6f86;--gold:#c9a66b;--radius:14px;
+    }
+    body{margin:0;font-family:"Georgia","Times New Roman",serif;background:var(--bg);color:var(--accent);}
+    header{padding:24px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(43,47,74,.06);}
+    nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--accent);font-weight:600}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{padding:24px;background:linear-gradient(90deg,rgba(201,166,107,0.06),transparent);border-radius:var(--radius)}
+    .hero h1{margin:0 0 8px;font-size:1.6rem}
+    .wonders{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 6px 16px rgba(43,47,74,.06);}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card-body{padding:16px}
+    .card-body h2{margin:0 0 6px;font-size:1.2rem}
+    .card-body p{margin:0 0 12px;color:var(--muted);font-size:0.95rem;line-height:1.4}
+    .more-btn{background:var(--gold);border:none;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+    .hotels{display:none;padding:14px;border-top:1px solid rgba(43,47,74,.08);background:#faf9f7;animation:slide 0.4s ease}
+    @keyframes slide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    .hotel{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:0.92rem}
+    .hotel img{width:60px;height:40px;object-fit:cover;border-radius:6px}
+    .hotel strong{display:block}
+    .book-btn{display:inline-block;margin-top:4px;background:var(--accent);color:#fff;padding:4px 8px;font-size:0.85rem;border-radius:6px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:700;font-size:1.1rem">My Travel Wishlist</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Japan — Wonders to Discover</h1>
+      <p>Experience Japan’s rich culture, natural beauty, and architectural wonders. Here are three must-see landmarks with nearby hotel options.</p>
+    </section>
+
+    <section class="wonders">
+      <!-- Mount Fuji -->
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\Mount-Fuji-New.jpg" alt="Mount Fuji">
+        <div class="card-body">
+          <h2>Mount Fuji</h2>
+          <p>Japan’s tallest peak and a UNESCO World Heritage site, Mount Fuji offers breathtaking scenery and is a sacred cultural symbol. Hiking trails and serene lakes nearby make it a dream destination for nature lovers.</p>
+          <button class="more-btn" onclick="toggleHotels('fuji')">More Info</button>
+        </div>
+        <div class="hotels" id="fuji">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\exterior.jpg" alt="Hotel Mystays Fuji">
+            <div>
+              <strong>Hotel Mystays Fuji</strong> • 2km away • ⭐⭐⭐⭐ • $120–$180/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\196630666.jpg" alt="Fuji View Hotel">
+            <div>
+              <strong>Fuji View Hotel</strong> • 3km away • ⭐⭐⭐⭐ • $150–$200/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fushimi Inari Shrine -->
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\Fushimi-Inari-Shrine-Kyoto-Japan.jpg" alt="Fushimi Inari Shrine">
+        <div class="card-body">
+          <h2>Fushimi Inari Shrine</h2>
+          <p>Located in Kyoto, this Shinto shrine is famous for its thousands of vibrant red torii gates that form mesmerizing paths up the mountain. It’s a spiritual site that blends history, culture, and natural beauty.</p>
+          <button class="more-btn" onclick="toggleHotels('inari')">More Info</button>
+        </div>
+        <div class="hotels" id="inari">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\9ce75dba_z.jpg" alt="Sakura Terrace Hotel">
+            <div>
+              <strong>Sakura Terrace Hotel</strong> • 2km away • ⭐⭐⭐⭐ • $90–$140/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\538ae97274455864516f97ad725af621.jpeg" alt="Hotel Granvia Kyoto">
+            <div>
+              <strong>Hotel Granvia Kyoto</strong> • 3km away • ⭐⭐⭐⭐⭐ • $200–$260/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+
+
+
+      <!-- Arashiyama Bamboo Grove -->
+      <article class="card">
+        <img src="c:\Users\Christine Bautista\Pictures\shutterstock_93262912-L.jpg" alt="Arashiyama Bamboo Grove">
+        <div class="card-body">
+          <h2>Arashiyama Bamboo Grove</h2>
+          <p>A magical forest of towering bamboo stalks in Kyoto. Walking through the serene grove feels surreal, offering a peaceful and truly photogenic experience unlike anywhere else in the world.</p>
+          <button class="more-btn" onclick="toggleHotels('bamboo')">More Info</button>
+        </div>
+        <div class="hotels" id="bamboo">
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\exterior-at-night.jpg" alt="Ryokan Arashiyama">
+            <div>
+              <strong>Ryokan Arashiyama</strong> • 1km away • ⭐⭐⭐ • $110–$150/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="hotel">
+            <img src="c:\Users\Christine Bautista\Pictures\images (1).jpg" alt="Suiran Kyoto">
+            <div>
+              <strong>Suiran Kyoto</strong> • 1.5km away • ⭐⭐⭐⭐⭐ • $300–$420/night
+              <a href="#" class="book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    function toggleHotels(id){
+      const el=document.getElementById(id);
+      el.style.display = (el.style.display==='block')?'none':'block';
+    }
+  </script>
+</body>
+</html>
